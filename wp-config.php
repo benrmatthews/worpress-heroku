@@ -14,18 +14,21 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'database_name_here');
+// ** Heroku Postgres settings - from Heroku Environment ** //
+//$db = parse_url($_ENV["DATABASE_URL"]);
+
+// ** MySQL settings - You can get this info from your web host * //
+/* The name of the database for WordPress */
+define('DB_NAME', "dbname");
 
 /** MySQL database username */
-define('DB_USER', 'username_here');
+define('DB_USER', "dbuser");
 
 /** MySQL database password */
-define('DB_PASSWORD', 'password_here');
+define('DB_PASSWORD', "dbuserpassword");
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', "localhost");
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -42,14 +45,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         'IT,_1R#mn[-p~&L_@Wr|p)#$*K2]v-iWqg_eQInv;-5tOt{Jx@VnH4{@KbkXCA4?');
+define('SECURE_AUTH_KEY',  'oU^?(a1hBD/%%-820bnjwdIG2;L6b4@|K2{Z)z{=O?8)CL>(LM#>|FxEeWb6Y#+B');
+define('LOGGED_IN_KEY',    'F!Q!(FJ KG|Z=FWzq:hQ^c;9qPZ4Nl^|s(d)*h6G/Fz_ATzf->D@oQ,jqcB#-])j');
+define('NONCE_KEY',        '+bj@s]W~?PD:HX&w_>[R*^!Q <)u_cB2t}-X< d+E2SU2di}JEhR?.1[8b&dU3b)');
+define('AUTH_SALT',        '|Y4p86rZM_3Qxj T^qc3#{!-SC$&xMu#PnaJZUcNL!j,foqWce)|S`Do+yz=-m9}');
+define('SECURE_AUTH_SALT', '3.x$a;oY-F||(J`>7l3(fZG(9jWUn4+?b]`hDf_`bDD,;_lE.Yvcr^)`c3=`1|J^');
+define('LOGGED_IN_SALT',   'A,g+4{uJ5at.vN:)H-cV?XE$1+}V*m8z3%!;>I6}.|0c~405k6xEzQx?o[p_7p-$');
+define('NONCE_SALT',       '$gRvJ,m#G}@ul<P;y+ P,Q/4bzP#O5@?kPCGB=6d-YURD-#Pq.@Q0W&B5i^G?/W/');
 
 /**#@-*/
 
@@ -78,3 +81,5 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
